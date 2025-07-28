@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Women World Magazine</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ✅ Top Contact Bar -->
+<div class="contact-bar">
+  <div class="container">
+    <div class="contact-info">
+      <span>📞 +91 0000000000</span>
+      <span>✉️ magazine.com</span>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Main Header with Logo + Navigation -->
+<header class="header-nav">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="https://womenworldmagazine.com/wp-content/uploads/2023/01/logo.png" alt="Company Logo">
+    </div>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="magazine.html">Magazines</a></li>
+        <li><a href="article.html">Articles</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ✅ Banner Section -->
+<section class="about-banner">
+  <div class="overlay">
+    <h1>About Us</h1>
+    <p>Empowering voices, inspiring stories, and celebrating success.</p>
+  </div>
+</section>
+
+<!-- ✅ About Content -->
+<section class="about-section">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>
+      At Women World Magazine, we shine a light on remarkable women from all walks of life. We believe every story has the power to inspire, educate, and create change.
+    </p>
+
+    <h2>What We Do</h2>
+    <p>
+      From interviews with global leaders to featuring trailblazers in business, tech, wellness, and more — our magazine is a celebration of ambition, creativity, and courage.
+    </p>
+
+    <h2>Why It Matters</h2>
+    <p>
+      Women deserve a platform that values their voice. Through meaningful content, expert insights, and empowering narratives, we aim to elevate and amplify women's achievements worldwide.
+    </p>
+  </div>
+</section>
+
+<!-- Enhanced FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>What is The Empire Insights?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>The Empire Insights is a premium digital magazine platform featuring business leaders, success stories, and industry insights.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>How can I get featured?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>You can reach us via the Contact page or use our enquiry form. Our editorial team will get in touch with details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Can I download the magazines?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes, you can open and download magazine issues directly from the Magazines page.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const faqButtons = document.querySelectorAll('.faq-question');
+
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Close all others
+      faqButtons.forEach(otherBtn => {
+        if (otherBtn !== btn) {
+          otherBtn.nextElementSibling.classList.remove('open');
+          otherBtn.querySelector('.icon').textContent = '+';
+        }
+      });
+
+      // Toggle clicked one
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.icon');
+
+      if (answer.classList.contains('open')) {
+        answer.classList.remove('open');
+        icon.textContent = '+';
+      } else {
+        answer.classList.add('open');
+        icon.textContent = '−';
+      }
+    });
+  });
+</script>
+
+<!-- ✅ Footer -->
+<footer class="site-footer">
+  <p>&copy; 2025 Women World Magazine. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
